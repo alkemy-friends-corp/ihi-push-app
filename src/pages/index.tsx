@@ -1,5 +1,15 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Button } from "@/components/shadcn/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/shadcn/dialog";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -61,6 +71,98 @@ export default function Home() {
           >
             Read our docs
           </a>
+        </div>
+
+        {/* Shadcn UI Components Test Section */}
+        <div className="w-full max-w-2xl mx-auto mt-8 p-6 border rounded-lg bg-background">
+          <h2 className="text-2xl font-bold mb-6 text-center">Shadcn UI Components Test</h2>
+          
+          {/* Button Variants */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold mb-4">Button Variants</h3>
+            <div className="flex flex-wrap gap-3">
+              <Button variant="default">Default</Button>
+              <Button variant="destructive">Destructive</Button>
+              <Button variant="outline">Outline</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="ghost">Ghost</Button>
+              <Button variant="link">Link</Button>
+            </div>
+          </div>
+
+          {/* Button Sizes */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold mb-4">Button Sizes</h3>
+            <div className="flex flex-wrap gap-3 items-center">
+              <Button size="sm">Small</Button>
+              <Button size="default">Default</Button>
+              <Button size="lg">Large</Button>
+            </div>
+          </div>
+
+          {/* Dialog Test */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold mb-4">Dialog Component</h3>
+            <div className="flex flex-wrap gap-3">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline">Open Dialog</Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px]">
+                  <DialogHeader>
+                    <DialogTitle>Edit profile</DialogTitle>
+                    <DialogDescription>
+                      Make changes to your profile here. Click save when you're done.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="grid gap-4 py-4">
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <label htmlFor="name" className="text-right">
+                        Name
+                      </label>
+                      <input
+                        id="name"
+                        defaultValue="Pedro Duarte"
+                        className="col-span-3 border rounded-md px-3 py-2"
+                      />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <label htmlFor="username" className="text-right">
+                        Username
+                      </label>
+                      <input
+                        id="username"
+                        defaultValue="@peduarte"
+                        className="col-span-3 border rounded-md px-3 py-2"
+                      />
+                    </div>
+                  </div>
+                  <DialogFooter>
+                    <Button type="submit">Save changes</Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="destructive">Delete Item</Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Are you sure?</DialogTitle>
+                    <DialogDescription>
+                      This action cannot be undone. This will permanently delete your account
+                      and remove your data from our servers.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <DialogFooter>
+                    <Button variant="outline">Cancel</Button>
+                    <Button variant="destructive">Delete</Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            </div>
+          </div>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
