@@ -1,0 +1,1 @@
+export { default as DeviceManagerComponent } from './device-manager' 

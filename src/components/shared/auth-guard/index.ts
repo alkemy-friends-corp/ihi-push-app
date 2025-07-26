@@ -1,0 +1,1 @@
+export { default as AuthGuardComponent } from './auth-guard' 

@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { AuthGuard } from '@/components/shared/AuthGuard';
+import { AuthGuardComponent } from '@/components/shared';
 import type { NextPageWithLayout } from '../_app';
 import { LoginComponent } from '@/components/auth/login';
 
@@ -7,9 +7,9 @@ const LoginPage: NextPageWithLayout = () => <LoginComponent />;
 
 LoginPage.getLayout = (page: ReactElement) => {
   return (
-    <AuthGuard authRequired={false}>
+    <AuthGuardComponent authRequired={false}>
       {page}
-    </AuthGuard>
+    </AuthGuardComponent>
   );
 };
 

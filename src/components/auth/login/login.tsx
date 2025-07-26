@@ -30,21 +30,15 @@ const LoginComponent = () => {
     setIsLoading(true)
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // Mock user data - in real app, this would come from your API
+      console.log('data', data)
       const mockUser = {
         id: '1',
         name: 'Admin User',
         email: data.email,
-        role: data.email.includes('admin') ? 'admin' as const : 'user' as const,
+        role: 'admin' as const,
         avatar: undefined,
       }
-      
       login(mockUser)
-      
-      // Redirect based on role
       if (mockUser.role === 'admin') {
         router.push('/admin/dashboard')
       } else {
