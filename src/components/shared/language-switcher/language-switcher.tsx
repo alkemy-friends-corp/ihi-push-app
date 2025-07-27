@@ -11,7 +11,7 @@ const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="bg-white rounded-lg border shadow-md p-1">
+    <div className="bg-white rounded-lg p-1">
     <Select value={language} onValueChange={(value: Language) => setLanguage(value)}>
       <SelectTrigger className="w-32 border-0 text-gray-800 hover:bg-gray-100 focus:ring-gray-300 h-8">
         <div className="flex items-center gap-2">
@@ -38,9 +38,6 @@ const LanguageSwitcher = () => {
       </SelectContent>
     </Select>
   </div>
-    // <div className="absolute top-4 right-4 z-50">
-     
-    // </div>
   );
 }
 
