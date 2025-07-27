@@ -14,6 +14,7 @@ import {
   ArrowLeft,
   Bell,
   ChevronDown,
+  Clock,
   LayoutDashboard,
   LogOut,
   Map,
@@ -69,6 +70,13 @@ export function AdminLayout({ children, activeMenu }: AdminLayoutProps) {
       icon: Bell,
       badge: scheduledNotifications,
       path: '/admin/notifications'
+    },
+    {
+      id: 'scheduled' as Page,
+      label: t('admin.menu.scheduled'),
+      icon: Clock,
+      badge: null,
+      path: '/admin/scheduled'
     },
     {
       id: 'map' as Page,
