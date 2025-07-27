@@ -1,0 +1,257 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "login": "Login",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "profile": "Profile",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "reset": "Reset"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember me",
+    "invalidCredentials": "Invalid email or password",
+    "loginSuccess": "Login successful",
+    "logoutSuccess": "Logout successful"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "help": "Help",
+    "language": "Language"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "deviceManager": "Device Manager",
+    "users": "Users",
+    "analytics": "Analytics",
+    "reports": "Reports"
+  },
+  "device": {
+    "devices": "Devices",
+    "addDevice": "Add Device",
+    "deviceName": "Device Name",
+    "deviceType": "Device Type",
+    "status": "Status",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Last Seen"
+  },
+  "app": {
+    "title": "Toyosu Spots",
+    "subtitle": "Discover amazing experiences in Toyosu area",
+    "welcome": "🇯🇵 Welcome to Japan!"
+  },
+  "benefits": {
+    "title": "Special Benefits for Visitors",
+    "subtitle": "Unlock exclusive deals and insider tips for your Toyosu adventure",
+    "restaurant": "Restaurant Deals",
+    "photo": "Photo Spots",
+    "shopping": "Shopping Discounts",
+    "transport": "Transport Guide"
+  },
+  "service": {
+    "title": "Make Toyosu tourism more convenient and fun.",
+    "subtitle": "We deliver perfect information tailored to your current location.",
+    "notification": {
+      "title": "When you turn on notifications,",
+      "description": "you can receive real-time information about great shops and exclusive coupons around your current location, as well as important weather and disaster information."
+    },
+    "conclusion": "Delicious, fun, and safe. Your smart travel companion for those who want to enjoy Toyosu to the fullest."
+  },
+  "weather": {
+    "title": "Weather & Safety Information",
+    "subtitle": "Stay informed about current conditions for a safe and enjoyable visit",
+    "current": "Current Weather in Toyosu",
+    "partlyCloudy": "Partly Cloudy",
+    "safe": "No weather alerts or disasters reported. Safe for sightseeing! 🌟"
+  },
+  "form": {
+    "title": "Let's receive notifications!",
+    "subtitle": "Please enter your stay information and consent to receive notifications.",
+    "country": {
+      "label": "Which country are you visiting from?",
+      "placeholder": "Select your country"
+    },
+    "duration": {
+      "label": "How long will you be staying in the Toyosu area?",
+      "placeholder": "Select your stay duration"
+    },
+    "location": {
+      "label": "Location-based Notifications",
+      "description": "Receive essential safety alerts, local recommendations, and exclusive deals based on your location",
+      "required": "Location permission is required to receive important notifications during your stay"
+    },
+    "notifications": {
+      "title": "You'll receive notifications about:",
+      "weather": "Weather warnings and alerts",
+      "disasters": "Disaster and emergency information",
+      "safety": "Safety and security updates",
+      "transport": "Transportation disruptions",
+      "events": "Local events and attractions",
+      "discounts": "Restaurant deals and shopping discounts"
+    },
+    "submit": "I consent to receive notifications",
+    "complete": {
+      "title": "Welcome to Toyosu!",
+      "message": "Your personalized experience is now ready. Enjoy exploring!"
+    }
+  },
+  "duration": {
+    "1day": "1 day",
+    "2days": "2 days",
+    "3days": "3 days",
+    "4days": "4 days",
+    "5days": "5 days",
+    "1week": "1 week",
+    "2weeks": "2 weeks",
+    "3weeks": "3 weeks",
+    "4weeks": "4 weeks"
+  },
+  "pwa": {
+    "title": "Install Toyosu Spots",
+    "subtitle": "Add this app to your home screen for quick access during your visit!",
+    "button": "Add to Home Screen",
+    "iphone": "For iPhone/Safari:",
+    "android": "For Android/Chrome:",
+    "guide": {
+      "show": "Show Installation Guide",
+      "hide": "Hide Installation Guide",
+      "iphone": {
+        "step1": "Tap the share button (square with arrow)",
+        "step2": "Scroll down and tap \"Add to Home Screen\"",
+        "step3": "Tap \"Add\" to confirm"
+      },
+      "android": {
+        "step1": "Tap the menu button (three dots)",
+        "step2": "Tap \"Add to Home screen\"",
+        "step3": "Tap \"Add\" to confirm"
+      }
+    }
+  },
+  "footer": {
+    "enjoy": "Have a wonderful time in Toyosu! 🗼",
+    "support": "For support, visit our help center or contact staff at any tourist information point."
+  },
+  "language": {
+    "label": "Language / 言語"
+  },
+  "admin": {
+    "login": {
+      "adminLogin": "Admin Login"
+    },
+    "title": "Admin Panel",
+    "lastUpdated": "Last updated",
+    "systemStatus": "System Normal",
+    "returnToMain": "Return to Main App",
+    "logout": "Logout",
+    "menu": {
+      "dashboard": "Dashboard",
+      "users": "Device Management",
+      "notifications": "Ad-hoc Notifications",
+      "scheduled": "Scheduled Notifications",
+      "map": "Location Notifications",
+      "disaster": "Disaster Management"
+    },
+    "users": {
+      "title": "Device Management",
+      "subtitle": "Manage and monitor registered users",
+      "export": "Export CSV",
+      "totalUsers": "Total Users",
+      "activeUsers": "Active Users",
+      "expiredUsers": "Expired Users",
+      "todayAccess": "Today's Access",
+      "list": {
+        "title": "User List",
+        "subtitle": "Detailed information and notification status of registered users"
+      },
+      "search": "Search by device token, user ID, country...",
+      "filter": {
+        "status": "Filter by status",
+        "allStatus": "All statuses",
+        "active": "Active",
+        "expired": "Expired",
+        "country": "Filter by country",
+        "allCountries": "All countries"
+      },
+      "table": {
+        "userId": "User ID",
+        "deviceToken": "Device Token",
+        "country": "Country",
+        "stayEnd": "Stay End Date",
+        "status": "Status",
+        "lastAccess": "Last Access",
+        "registration": "Registration Date"
+      },
+      "noResults": "No users match the search criteria"
+    },
+    "disaster": {
+      "title": "Disaster Information Management",
+      "subtitle": "Disaster information monitoring, automatic notifications, and delivery management",
+      "refresh": "Refresh",
+      "refreshing": "Refreshing...",
+      "stats": {
+        "total": "Total Disaster Info",
+        "urgent": "Emergency Info",
+        "autoNotified": "Auto Notified"
+      },
+      "filter": {
+        "all": "All",
+        "active": "Active",
+        "urgent": "Urgent"
+      },
+      "list": {
+        "title": "Disaster Information List",
+        "subtitle": "List of disaster information being monitored in real-time (with automatic notification feature)"
+      },
+      "table": {
+        "type": "Type",
+        "title": "Title",
+        "severity": "Severity",
+        "area": "Target Area",
+        "issued": "Issued Time",
+        "notification": "Notification Status",
+        "actions": "Actions"
+      },
+      "notification": {
+        "sent": "Auto sent",
+        "notSent": "Not sent"
+      },
+      "severity": {
+        "emergency": "Special Warning",
+        "warning": "Warning",
+        "advisory": "Advisory",
+        "info": "Information"
+      },
+      "type": {
+        "earthquake": "Earthquake",
+        "heavyRain": "Heavy Rain",
+        "tsunami": "Tsunami",
+        "typhoon": "Typhoon",
+        "landslide": "Landslide",
+        "flood": "Flood",
+        "storm": "Storm"
+      }
+    }
+  }
+} 

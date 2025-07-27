@@ -1,0 +1,257 @@
+{
+  "common": {
+    "welcome": "ようこそ",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "dashboard": "ダッシュボード",
+    "settings": "設定",
+    "profile": "プロフィール",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "add": "追加",
+    "search": "検索",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "confirm": "確認",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "reset": "リセット"
+  },
+  "auth": {
+    "signIn": "サインイン",
+    "signUp": "サインアップ",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "forgotPassword": "パスワードを忘れましたか？",
+    "rememberMe": "ログイン状態を保持",
+    "invalidCredentials": "メールアドレスまたはパスワードが無効です",
+    "loginSuccess": "ログインに成功しました",
+    "logoutSuccess": "ログアウトに成功しました"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "about": "概要",
+    "contact": "お問い合わせ",
+    "help": "ヘルプ",
+    "language": "言語"
+  },
+  "admin": {
+    "dashboard": "管理者ダッシュボード",
+    "deviceManager": "デバイス管理",
+    "users": "ユーザー",
+    "analytics": "分析",
+    "reports": "レポート"
+  },
+  "device": {
+    "devices": "デバイス",
+    "addDevice": "デバイスを追加",
+    "deviceName": "デバイス名",
+    "deviceType": "デバイスタイプ",
+    "status": "ステータス",
+    "online": "オンライン",
+    "offline": "オフライン",
+    "lastSeen": "最終確認"
+  },
+  "app": {
+    "title": "Toyosu Spots",
+    "subtitle": "豊洲エリアの素晴らしい体験を発見しよう",
+    "welcome": "🇯🇵 日本へようこそ！"
+  },
+  "benefits": {
+    "title": "訪問者限定特典",
+    "subtitle": "豊洲観光をもっと楽しくするお得な情報とインサイダーのコツを解放",
+    "restaurant": "レストラン割引",
+    "photo": "撮影スポット",
+    "shopping": "ショッピング割引",
+    "transport": "交通ガイド"
+  },
+  "service": {
+    "title": "豊洲観光がもっと便利に、もっと楽しく。",
+    "subtitle": "今いる場所に合わせて、ぴったりな情報をお届けします。",
+    "notification": {
+      "title": "通知をオンにすると、",
+      "description": "現在地周辺のお得なお店情報や限定クーポン、さらに気になる天気・災害情報もリアルタイムで受け取れます。"
+    },
+    "conclusion": "おいしい・たのしい・あんしん。豊洲をめいっぱい楽しみたいあなたへ、かしこい旅の相棒です。"
+  },
+  "weather": {
+    "title": "天気・安全情報",
+    "subtitle": "安全で楽しい観光のために現在の状況をご確認ください",
+    "current": "豊洲の現在の天気",
+    "partlyCloudy": "晴れ時々曇り",
+    "safe": "気象警報や災害の報告はありません。観光に適しています！🌟"
+  },
+  "form": {
+    "title": "通知を受け取ろう！",
+    "subtitle": "あなたの滞在情報を入力してお知らせの提供に同意してください。",
+    "country": {
+      "label": "どちらの国からお越しですか？",
+      "placeholder": "国を選択してください"
+    },
+    "duration": {
+      "label": "豊洲エリアにはどのくらい滞在されますか？",
+      "placeholder": "滞在期間を選択してください"
+    },
+    "location": {
+      "label": "位置情報ベース通知",
+      "description": "位置情報に基づいて重要な安全情報、地域のおすすめ情報、お得な情報を受け取る",
+      "required": "滞在中の重要な通知を受け取るには位置情報の許可が必要です"
+    },
+    "notifications": {
+      "title": "以下の通知を受け取ります：",
+      "weather": "気象警報・注意報",
+      "disasters": "災害・緊急事態の情報",
+      "safety": "安全・防犯情報",
+      "transport": "交通機関の運行情報",
+      "events": "地域イベント・観光地情報",
+      "discounts": "レストラン割引・ショッピング特典"
+    },
+    "submit": "同意して通知を受け取ります",
+    "complete": {
+      "title": "豊洲へようこそ！",
+      "message": "パーソナライズされた体験の準備が整いました。探索をお楽しみください！"
+    }
+  },
+  "duration": {
+    "1day": "1日",
+    "2days": "2日",
+    "3days": "3日",
+    "4days": "4日",
+    "5days": "5日",
+    "1week": "1週間",
+    "2weeks": "2週間",
+    "3weeks": "3週間",
+    "4weeks": "4週間"
+  },
+  "pwa": {
+    "title": "Toyosu Spotsをインストール",
+    "subtitle": "訪問中の素早いアクセスのために、このアプリをホーム画面に追加してください！",
+    "button": "ホーム画面に追加",
+    "iphone": "iPhone/Safari の場合：",
+    "android": "Android/Chrome の場合：",
+    "guide": {
+      "show": "インストールガイドを表示",
+      "hide": "インストールガイドを非表示",
+      "iphone": {
+        "step1": "シェアボタン（矢印付きの四角）をタップ",
+        "step2": "スクロールして「ホーム画面に追加」をタップ",
+        "step3": "「追加」をタップして確認"
+      },
+      "android": {
+        "step1": "メニューボタン（3つの点）をタップ",
+        "step2": "「ホーム画面に追加」をタップ",
+        "step3": "「追加」をタップして確認"
+      }
+    }
+  },
+  "footer": {
+    "enjoy": "豊洲での素晴らしい時間をお過ごしください！🗼",
+    "support": "サポートが必要な場合は、ヘルプセンターまたは観光案内所のスタッフにお問い合わせください。"
+  },
+  "language": {
+    "label": "Language / 言語"
+  },
+  "admin": {
+    "login": {
+      "adminLogin": "管理者ログイン"
+    },
+    "title": "管理画面",
+    "lastUpdated": "最終更新",
+    "systemStatus": "システム正常",
+    "returnToMain": "メインアプリに戻る",
+    "logout": "ログアウト",
+    "menu": {
+      "dashboard": "ダッシュボード",
+      "users": "ユーザー管理",
+      "notifications": "随時通知",
+      "scheduled": "定期通知管理",
+      "map": "地点通知",
+      "disaster": "災害情報管理"
+    },
+    "users": {
+      "title": "ユーザー管理",
+      "subtitle": "登録ユーザーの管理と監視",
+      "export": "CSVエクスポート",
+      "totalUsers": "総ユーザー数",
+      "activeUsers": "アクティブユーザー",
+      "expiredUsers": "期限切れユーザー",
+      "todayAccess": "今日のアクセス",
+      "list": {
+        "title": "ユーザー一覧",
+        "subtitle": "登録されたユーザーの詳細情報と通知ステータス"
+      },
+      "search": "デバイストークン、ユーザーID、国名で検索...",
+      "filter": {
+        "status": "ステータスで絞り込み",
+        "allStatus": "すべてのステータス",
+        "active": "アクティブ",
+        "expired": "期限切れ",
+        "country": "国で絞り込み",
+        "allCountries": "すべての国"
+      },
+      "table": {
+        "userId": "ユーザーID",
+        "deviceToken": "デバイストークン",
+        "country": "国",
+        "stayEnd": "滞在終了日",
+        "status": "ステータス",
+        "lastAccess": "最終アクセス",
+        "registration": "登録日"
+      },
+      "noResults": "検索条件に一致するユーザーが見つかりません"
+    },
+    "disaster": {
+      "title": "災害情報管理",
+      "subtitle": "災害情報の監視・自動通知・配信管理",
+      "refresh": "更新",
+      "refreshing": "更新中...",
+      "stats": {
+        "total": "総災害情報数",
+        "urgent": "緊急情報",
+        "autoNotified": "自動通知済み"
+      },
+      "filter": {
+        "all": "すべて",
+        "active": "アクティブ",
+        "urgent": "緊急"
+      },
+      "list": {
+        "title": "災害情報一覧",
+        "subtitle": "リアルタイムで監視している災害情報の一覧（自動通知機能付き）"
+      },
+      "table": {
+        "type": "種類",
+        "title": "タイトル",
+        "severity": "重要度",
+        "area": "対象地域",
+        "issued": "発表時刻",
+        "notification": "通知状況",
+        "actions": "操作"
+      },
+      "notification": {
+        "sent": "自動送信済み",
+        "notSent": "未送信"
+      },
+      "severity": {
+        "emergency": "特別警報",
+        "warning": "警報",
+        "advisory": "注意報",
+        "info": "情報"
+      },
+      "type": {
+        "earthquake": "地震",
+        "heavyRain": "大雨",
+        "tsunami": "津波",
+        "typhoon": "台風",
+        "landslide": "土砂災害",
+        "flood": "洪水",
+        "storm": "暴風"
+      }
+    }
+  }
+} 
