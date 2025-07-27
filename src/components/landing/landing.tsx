@@ -9,7 +9,9 @@ const LandingPageComponent = () => {
     const { t } = useTranslations();
     return (
         <div className="relative">
-            <LanguageSwitcher />
+            <div className="absolute top-4 right-4 z-50">
+                <LanguageSwitcher />
+            </div>
             <HeroSection />
             <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50">
                 <div className="container mx-auto px-4 py-8 max-w-md">
