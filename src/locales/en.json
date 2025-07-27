@@ -173,6 +173,28 @@
       "map": "Location Notifications",
       "disaster": "Disaster Management"
     },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welcome to Toyosu Spots Admin Panel",
+      "stats": {
+        "totalUsers": "Total Users",
+        "notifications": "Notification Management",
+        "locationNotifications": "Location Notifications",
+        "disasterInfo": "Disaster Information",
+        "todayAccess": "Today's Access"
+      },
+      "badges": {
+        "active": "Active",
+        "expired": "Expired",
+        "scheduled": "Scheduled",
+        "today": "Today",
+        "pending": "Pending",
+        "emergency": "Emergency"
+      },
+      "descriptions": {
+        "todayAccess": "Users who accessed today"
+      }
+    },
     "users": {
       "title": "Device Management",
       "subtitle": "Manage and monitor registered users",

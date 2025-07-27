@@ -173,6 +173,28 @@
       "map": "地点通知",
       "disaster": "災害情報管理"
     },
+    "dashboard": {
+      "title": "ダッシュボード",
+      "welcome": "Toyosu Spots 管理画面へようこそ",
+      "stats": {
+        "totalUsers": "総ユーザー数",
+        "notifications": "通知管理",
+        "locationNotifications": "位置通知",
+        "disasterInfo": "災害情報",
+        "todayAccess": "今日のアクセス"
+      },
+      "badges": {
+        "active": "アクティブ",
+        "expired": "期限切れ",
+        "scheduled": "予約済み",
+        "today": "今日",
+        "pending": "送信予定",
+        "emergency": "緊急"
+      },
+      "descriptions": {
+        "todayAccess": "今日アクセスしたユーザー"
+      }
+    },
     "users": {
       "title": "ユーザー管理",
       "subtitle": "登録ユーザーの管理と監視",
