@@ -3,6 +3,7 @@ import { LanguageSwitcher } from "../shared";
 import { HeroSection } from "./hero";
 import { ServiceExplanation } from "./service";
 import { PWAInstallGuide } from "./pwa-guideline";
+import { PermissionButton } from "./permission-button";
 import { useTranslations } from "@/hooks/useTranslations";
 
 const LandingPageComponent = () => {
@@ -17,6 +18,7 @@ const LandingPageComponent = () => {
                 <div className="container mx-auto px-4 py-8 max-w-md">
                     <div className="space-y-6">
                         <ServiceExplanation />
+                        <PermissionButton />
                         {/* {!isFormCompleted ? (
                             <TouristForm onComplete={handleFormComplete} />
                         ) : (
