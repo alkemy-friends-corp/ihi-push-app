@@ -23,7 +23,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Initialize Firebase Cloud Messaging and get a reference to the service
-let messaging: any = null;
+let messaging: ReturnType<typeof getMessaging> | null = null;
 
 // Check if messaging is supported
 isSupported().then((supported) => {

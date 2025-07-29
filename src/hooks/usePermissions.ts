@@ -38,7 +38,7 @@ export const usePermissions = () => {
         const locationData = await locationService.getCurrentPosition();
         locationStatus = 'granted';
         setState(prev => ({ ...prev, locationData }));
-      } catch (error) {
+      } catch {
         locationStatus = 'denied';
       }
 
@@ -106,7 +106,7 @@ export const usePermissions = () => {
       toast.error('Failed to get location permission');
       return false;
     }
-  }, []);
+  }, [state.fcmToken]);
 
   const requestNotificationPermission = useCallback(async () => {
     setState(prev => ({ ...prev, isLoading: true }));

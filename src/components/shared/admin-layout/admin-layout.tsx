@@ -18,7 +18,6 @@ import {
   LayoutDashboard,
   LogOut,
   Map,
-  Menu,
   User,
   Users,
   X

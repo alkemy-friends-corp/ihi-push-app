@@ -89,7 +89,7 @@ const WeatherWidget = ({ weatherData, className = '', compact = false }: Weather
   return (
     <div className={`${className} space-y-4`}>
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">Today's Weather</span>
+        <span className="text-sm font-medium">Today&apos;s Weather</span>
         <Badge variant="secondary" className="text-xs">
           {new Date().toLocaleDateString('en-US', { 
             weekday: 'short', 

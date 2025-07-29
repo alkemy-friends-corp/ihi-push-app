@@ -16,7 +16,7 @@ const ForbiddenPage: NextPageWithLayout = () => {
           <div className="text-6xl font-bold text-red-600 mb-4">403</div>
           <CardTitle className="text-2xl">Access Forbidden</CardTitle>
           <CardDescription>
-            You don't have permission to access this page. This area is restricted to administrators only.
+            You don&apos;t have permission to access this page. This area is restricted to administrators only.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">

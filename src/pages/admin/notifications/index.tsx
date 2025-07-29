@@ -1,8 +1,5 @@
 import type { ReactElement } from 'react';
 import { AuthGuardComponent, AdminLayout } from '@/components/shared';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/shadcn/card';
-import { Button } from '@/components/shadcn/button';
-import { Bell, Send, Clock, CheckCircle } from 'lucide-react';
 import type { NextPageWithLayout } from '../../_app';
 
 const NotificationsPage: NextPageWithLayout = () => {
