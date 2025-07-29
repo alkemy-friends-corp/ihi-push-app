@@ -153,6 +153,24 @@
     "enjoy": "Have a wonderful time in Toyosu! 🗼",
     "support": "For support, visit our help center or contact staff at any tourist information point."
   },
+  "permissions": {
+    "title": "Enable Notifications & Location",
+    "description": "Get real-time alerts and location-based services",
+    "location": "Location",
+    "notifications": "Notifications",
+    "granted": "Granted",
+    "denied": "Denied",
+    "prompt": "Not Set",
+    "currentLocation": "Current Location",
+    "fcmToken": "FCM Token",
+    "requesting": "Requesting...",
+    "allGranted": "All Permissions Granted",
+    "requestRemaining": "Request Remaining Permissions",
+    "enableAll": "Enable All Permissions",
+    "successMessage": "You're all set! You'll receive notifications and location-based alerts.",
+    "startTracking": "Start Tracking",
+    "stopTracking": "Stop Tracking"
+  },
   "language": {
     "label": "Language / 言語"
   },

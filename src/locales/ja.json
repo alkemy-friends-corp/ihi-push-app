@@ -153,6 +153,24 @@
     "enjoy": "豊洲での素晴らしい時間をお過ごしください！🗼",
     "support": "サポートが必要な場合は、ヘルプセンターまたは観光案内所のスタッフにお問い合わせください。"
   },
+  "permissions": {
+    "title": "通知と位置情報を有効にする",
+    "description": "リアルタイムアラートと位置情報ベースのサービスを受け取る",
+    "location": "位置情報",
+    "notifications": "通知",
+    "granted": "許可済み",
+    "denied": "拒否",
+    "prompt": "未設定",
+    "currentLocation": "現在位置",
+    "fcmToken": "FCMトークン",
+    "requesting": "要求中...",
+    "allGranted": "すべての許可が完了",
+    "requestRemaining": "残りの許可を要求",
+    "enableAll": "すべての許可を有効にする",
+    "successMessage": "準備完了です！通知と位置情報ベースのアラートを受け取ります。",
+    "startTracking": "追跡開始",
+    "stopTracking": "追跡停止"
+  },
   "language": {
     "label": "Language / 言語"
   },
