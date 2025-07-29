@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/shadcn/switch";
 import { Badge } from "@/components/shadcn/badge";
 import { Alert, AlertDescription } from "@/components/shadcn/alert";
-import { Globe, Calendar, MapPin, Shield, AlertTriangle } from "lucide-react";
+import { Globe, Calendar, MapPin, AlertTriangle } from "lucide-react";
 import { useServiceWorker } from "@/hooks/useServiceWorker";
 
 interface NotificationRegistrationProps {
@@ -438,7 +438,7 @@ const NotificationRegistration: React.FC<NotificationRegistrationProps> = ({ onC
       <CardHeader className="text-center">
         <CardTitle className="flex items-center justify-center gap-2 text-xl font-bold">
           <Globe className="h-6 w-6" />
-          Let's receive notifications!
+          Let&apos;s receive notifications!
         </CardTitle>
         <p className="text-sm text-muted-foreground">
           Please enter your stay information and consent to receive notifications.
@@ -519,7 +519,7 @@ const NotificationRegistration: React.FC<NotificationRegistrationProps> = ({ onC
           <div className="border border-green-200 bg-green-50 rounded-lg p-3 mt-3">
             <div className="flex items-center gap-2 mb-2">
               <MapPin className="h-4 w-4 text-green-600" />
-              <h5 className="font-medium text-green-800">You'll receive notifications about:</h5>
+              <h5 className="font-medium text-green-800">You&apos;ll receive notifications about:</h5>
             </div>
             <ul className="text-sm text-green-700 space-y-1">
               <li>• Weather warnings and alerts</li>
