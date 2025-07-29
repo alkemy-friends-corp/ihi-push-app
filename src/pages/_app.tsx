@@ -4,7 +4,7 @@ import { Toaster } from "@/components/shadcn/sonner";
 import type { ReactElement, ReactNode } from "react";
 import "@/contexts/i18n";
 
-export type NextPageWithLayout<P = {}, IP = P> = AppProps['Component'] & {
+export type NextPageWithLayout<P = Record<string, unknown>> = AppProps['Component'] & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
 

@@ -37,7 +37,7 @@ export function HeroSection() {
             }`}
           >
             <img
-              src={(image.src as any).src || (image.src as unknown as string)}
+              src={image.src}
               alt={image.alt}
               className="w-full h-full object-cover"
             />
