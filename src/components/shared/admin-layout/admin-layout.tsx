@@ -25,6 +25,7 @@ import {
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { WeatherWidget } from '../weather-widget'
+import Image from 'next/image'
 
 export type Page = 'dashboard' | 'users' | 'notifications' | 'scheduled' | 'map' | 'disaster'
 
@@ -173,10 +174,12 @@ export function AdminLayout({ children, activeMenu }: AdminLayoutProps) {
                 >
                   <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
                     {adminUser.avatar ? (
-                      <img
+                      <Image
                         src={adminUser.avatar}
                         alt="Profile"
-                        className="w-8 h-8 rounded-full object-cover"
+                        className="rounded-full object-cover" 
+                        width={32}
+                        height={32}
                       />
                     ) : (
                       <User className="w-4 h-4 text-white" />
