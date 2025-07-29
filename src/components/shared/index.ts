@@ -5,3 +5,4 @@ export * from './weather-widget';
 export * from './common-select';
 export * from './pwa-install-prompt';
 export * from './pwa-status';
+export * from './service-worker-register';
