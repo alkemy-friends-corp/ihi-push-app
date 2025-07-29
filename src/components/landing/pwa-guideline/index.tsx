@@ -1,15 +1,29 @@
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/shadcn/card";
 import { Button } from "@/components/shadcn/button";
-import { Smartphone, Plus } from "lucide-react";
+import { Smartphone, Plus, CheckCircle } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
+import { usePWAInstall } from "@/hooks/usePWAInstall";
 
 export function PWAInstallGuide() {
   const { t } = useTranslations();
   const [isExpanded, setIsExpanded] = useState(false);
+  const { isInstallable, isInstalled, installApp, showInstallInstructions } = usePWAInstall();
 
-  const handleAddToHomeScreen = () => {
-    alert("Please use your browser's 'Add to Home Screen' option to install Toyosu Spots!");
+  const handleAddToHomeScreen = async () => {
+    if (isInstalled) {
+      alert("Toyosu Spots is already installed on your device!");
+      return;
+    }
+
+    if (isInstallable) {
+      const success = await installApp();
+      if (!success) {
+        showInstallInstructions();
+      }
+    } else {
+      showInstallInstructions();
+    }
   };
 
   return (
@@ -28,9 +42,19 @@ export function PWAInstallGuide() {
           onClick={handleAddToHomeScreen}
           className="w-full"
           size="lg"
+          disabled={isInstalled}
         >
-          <Plus className="h-4 w-4 mr-2" />
-          {t('pwa.button')}
+          {isInstalled ? (
+            <>
+              <CheckCircle className="h-4 w-4 mr-2" />
+              Installed
+            </>
+          ) : (
+            <>
+              <Plus className="h-4 w-4 mr-2" />
+              {t('pwa.button')}
+            </>
+          )}
         </Button>
 
         <Button

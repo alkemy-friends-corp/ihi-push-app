@@ -1,5 +1,5 @@
 import React from "react";
-import { LanguageSwitcher } from "../shared";
+import { LanguageSwitcher, PWAInstallPrompt } from "../shared";
 import { HeroSection } from "./hero";
 import { ServiceExplanation } from "./service";
 import { PWAInstallGuide } from "./pwa-guideline";
@@ -42,6 +42,7 @@ const LandingPageComponent = () => {
                     </div>
                 </div>
             </div>
+            <PWAInstallPrompt />
         </div>
     );
 } 
