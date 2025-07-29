@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { fcmService } from '@/lib/notifications/fcm-service';
+import { pushNotificationService } from '@/lib/notifications/fcm-service';
 
 export function FCMInitializer() {
   useEffect(() => {
@@ -8,25 +8,25 @@ export function FCMInitializer() {
         console.log('🌐 Page loaded - initializing FCM service...');
         
         // Initialize FCM service
-        const initialized = await fcmService.initialize();
+        const initialized = await pushNotificationService.initialize();
         
         if (initialized) {
           console.log('✅ FCM service ready for background notifications');
           
           // Check if notification permission is already granted
-          const permissionStatus = fcmService.getCurrentPermissionStatus();
+          const permissionStatus = pushNotificationService.getCurrentPermissionStatus();
           if (permissionStatus === 'granted') {
             console.log('🔔 Notification permission already granted');
             
             // Try to get FCM token
             try {
-              const token = await fcmService.getFCMToken();
+              const token = await pushNotificationService.getPushSubscription();
               if (token) {
-                console.log('🔑 FCM token available:', token.substring(0, 20) + '...');
+                console.log('🔑 FCM token available:', token.endpoint.substring(0, 20) + '...');
                 
                 // Store token for other components to use
                 if (typeof window !== 'undefined') {
-                  localStorage.setItem('fcmToken', token);
+                  localStorage.setItem('fcmToken', token.endpoint);
                   console.log('💾 FCM token saved to localStorage');
                 }
               }

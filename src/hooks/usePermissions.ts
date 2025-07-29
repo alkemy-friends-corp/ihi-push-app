@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { fcmService, NotificationPermission, LocationData } from '@/lib/notifications/fcm-service';
+import { pushNotificationService, NotificationPermission, LocationData, PushSubscription } from '@/lib/notifications/fcm-service';
 import { locationService } from '@/lib/permissions/location-service';
 import { locationTracker, LocationLog } from '@/lib/permissions/location-tracker';
 import { toast } from 'sonner';
@@ -9,9 +9,10 @@ export interface PermissionState {
   notification: NotificationPermission['notification'];
   isLoading: boolean;
   locationData: LocationData | null;
-  fcmToken: string | null;
+  pushSubscription: PushSubscription | null;
   isTracking: boolean;
   locationLogs: LocationLog[];
+  isFirstVisit: boolean;
 }
 
 export const usePermissions = () => {
@@ -20,9 +21,10 @@ export const usePermissions = () => {
     notification: 'prompt',
     isLoading: false,
     locationData: null,
-    fcmToken: null,
+    pushSubscription: null,
     isTracking: false,
     locationLogs: [],
+    isFirstVisit: false,
   });
 
   const checkPermissions = useCallback(async () => {
@@ -30,7 +32,7 @@ export const usePermissions = () => {
 
     try {
       // Check notification permission
-      const notificationStatus = fcmService.getCurrentPermissionStatus();
+      const notificationStatus = pushNotificationService.getCurrentPermissionStatus();
       
       // Check location permission (we'll try to get position to determine status)
       let locationStatus: NotificationPermission['location'] = 'prompt';
@@ -42,23 +44,30 @@ export const usePermissions = () => {
         locationStatus = 'denied';
       }
 
-      // Try to load FCM token from localStorage
-      let fcmToken = null;
-      if (typeof window !== 'undefined') {
-        const storedToken = localStorage.getItem('fcmToken');
-        if (storedToken) {
-          fcmToken = storedToken;
-          console.log('🔑 FCM token loaded from localStorage:', storedToken.substring(0, 20) + '...');
-        }
+      // Try to load push subscription
+      let pushSubscription = null;
+      const subscription = pushNotificationService.getCurrentPushSubscription();
+      if (subscription) {
+        pushSubscription = subscription;
+        console.log('🔑 Push subscription loaded:', 'Available');
       }
+
+      // Check if first visit
+      const isFirstVisit = locationTracker.isFirstTimeVisit();
 
       setState(prev => ({
         ...prev,
         location: locationStatus,
         notification: notificationStatus,
-        fcmToken,
+        pushSubscription,
+        isFirstVisit,
         isLoading: false,
       }));
+
+      // Send immediate location if permissions are granted
+      if (locationStatus === 'granted') {
+        await locationTracker.sendImmediateLocation();
+      }
     } catch (error) {
       console.error('Error checking permissions:', error);
       setState(prev => ({ ...prev, isLoading: false }));
@@ -80,10 +89,13 @@ export const usePermissions = () => {
           isLoading: false,
         }));
         
-        // Update location tracker with current FCM token if available
-        if (state.fcmToken) {
-          locationTracker.setFCMToken(state.fcmToken);
+        // Update location tracker with current push subscription if available
+        if (state.pushSubscription) {
+          locationTracker.setPushSubscription(state.pushSubscription);
         }
+        
+        // Send immediate location
+        await locationTracker.sendImmediateLocation();
         
         toast.success('Location permission granted');
         return true;
@@ -106,14 +118,14 @@ export const usePermissions = () => {
       toast.error('Failed to get location permission');
       return false;
     }
-  }, [state.fcmToken]);
+  }, [state.pushSubscription]);
 
   const requestNotificationPermission = useCallback(async () => {
     setState(prev => ({ ...prev, isLoading: true }));
 
     try {
-      // Initialize FCM service
-      const initialized = await fcmService.initialize();
+      // Initialize push notification service
+      const initialized = await pushNotificationService.initialize();
       
       if (!initialized) {
         setState(prev => ({
@@ -125,29 +137,23 @@ export const usePermissions = () => {
         return false;
       }
 
-      const granted = await fcmService.requestNotificationPermission();
+      const granted = await pushNotificationService.requestNotificationPermission();
       
-              if (granted) {
-          const fcmToken = await fcmService.getFCMToken();
-          setState(prev => ({
-            ...prev,
-            notification: 'granted',
-            fcmToken,
-            isLoading: false,
-          }));
-          
-          // Save FCM token to localStorage
-          if (fcmToken && typeof window !== 'undefined') {
-            localStorage.setItem('fcmToken', fcmToken);
-            console.log('💾 FCM token saved to localStorage:', fcmToken.substring(0, 20) + '...');
-          }
-          
-          // Update location tracker with FCM token
-          locationTracker.setFCMToken(fcmToken);
-          
-          toast.success('Notification permission granted');
-          return true;
-        } else {
+      if (granted) {
+        const pushSubscription = await pushNotificationService.getPushSubscription();
+        setState(prev => ({
+          ...prev,
+          notification: 'granted',
+          pushSubscription,
+          isLoading: false,
+        }));
+        
+        // Update location tracker with push subscription
+        locationTracker.setPushSubscription(pushSubscription);
+        
+        toast.success('Notification permission granted');
+        return true;
+      } else {
         setState(prev => ({
           ...prev,
           notification: 'denied',
@@ -201,14 +207,14 @@ export const usePermissions = () => {
 
   const startLocationTracking = useCallback(() => {
     if (state.location === 'granted') {
-      locationTracker.startTracking(10000, (log: LocationLog) => {
+      locationTracker.startTracking(20000, (log: LocationLog) => {
         setState(prev => ({
           ...prev,
           locationLogs: [...prev.locationLogs, log].slice(-10), // Keep last 10 logs
         }));
       });
       setState(prev => ({ ...prev, isTracking: true }));
-      toast.success('Location tracking started - check console for updates');
+      toast.success('Location tracking started - updates every 20 seconds');
     } else {
       toast.error('Location permission required to start tracking');
     }

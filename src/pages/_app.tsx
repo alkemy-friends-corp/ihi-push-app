@@ -5,7 +5,7 @@ import { FCMInitializer } from "@/components/shared/fcm-initializer";
 import type { ReactElement, ReactNode } from "react";
 import "@/contexts/i18n";
 
-export type NextPageWithLayout<P = Record<string, unknown>> = AppProps['Component'] & {
+export type NextPageWithLayout = AppProps['Component'] & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
 

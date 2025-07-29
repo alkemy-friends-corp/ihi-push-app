@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MapPin } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
+import Image from "next/image";
 
 const toyosuImage1 = '/images/locations/toyosu/toyosu-photo-1.png';
 const toyosuImage2 = '/images/locations/toyosu/toyosu-photo-2.png';
@@ -36,10 +37,12 @@ export function HeroSection() {
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <img
+            <Image
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority={index === 0}
             />
           </div>
         ))}
