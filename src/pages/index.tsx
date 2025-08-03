@@ -1,16 +1,16 @@
 import type { ReactElement } from 'react';
-import { AuthGuardComponent } from '@/components/shared';
-import { LoginComponent } from '@/components/auth/login';
-import {NextPageWithLayout} from "./_app";
+import { AuthGuardComponent, AdminLayout } from '@/components/shared';
+import { DashboardComponent } from '@/components/admin/dashboard';
+import type { NextPageWithLayout } from './_app';
 
-const LoginPage: NextPageWithLayout = () => <LoginComponent />;
+const DashboardPage: NextPageWithLayout = () => <DashboardComponent />;
 
-LoginPage.getLayout = (page: ReactElement) => {
+DashboardPage.getLayout = (page: ReactElement) => {
   return (
-      <AuthGuardComponent authRequired={false}>
-        {page}
-      </AuthGuardComponent>
+    <AuthGuardComponent authRequired={true}>
+      <AdminLayout activeMenu="dashboard">{page}</AdminLayout>
+    </AuthGuardComponent>
   );
 };
 
-export default LoginPage;
+export default DashboardPage; 

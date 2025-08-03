@@ -36,7 +36,7 @@ export default function AuthGuardComponent({
     }
 
     if (isAuthenticated && router.pathname === '/auth/login') {
-      router.replace(isAdmin ? '/admin/dashboard' : '/')
+      router.replace(isAdmin ? '/' : '/')
       return
     }
 
