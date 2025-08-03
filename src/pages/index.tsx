@@ -1,16 +1,16 @@
-import { LandingPageComponent } from '@/components/landing';
-import { AuthGuardComponent } from '@/components/shared';
 import type { ReactElement } from 'react';
-import type { NextPageWithLayout } from './_app';
+import { AuthGuardComponent } from '@/components/shared';
+import { LoginComponent } from '@/components/auth/login';
+import {NextPageWithLayout} from "./_app";
 
-const HomePage: NextPageWithLayout = () => <LandingPageComponent />;
+const LoginPage: NextPageWithLayout = () => <LoginComponent />;
 
-HomePage.getLayout = (page: ReactElement) => {
+LoginPage.getLayout = (page: ReactElement) => {
   return (
-    <AuthGuardComponent authRequired={false}>
-      {page}
-    </AuthGuardComponent>
+      <AuthGuardComponent authRequired={false}>
+        {page}
+      </AuthGuardComponent>
   );
 };
 
-export default HomePage;
+export default LoginPage;
